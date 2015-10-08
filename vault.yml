@@ -1,0 +1,15 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: no
+
+  tasks:
+
+  - include_vars: secrets.yml
+
+  - debug: msg="test_password is {{ test_password }}"
+
+  - name: run ant
+    shell: ant -f vault.xml chdir='ant/'
+    environment:
+      test_password: test_password

@@ -1,0 +1,9 @@
+<project name="test" default="main" basedir="." >
+
+  <property environment="env"/>
+
+  <target name="main">
+    <echo message="[ANT TASK]: test_password is ${env.test_password}" />
+  </target>
+
+</project>
