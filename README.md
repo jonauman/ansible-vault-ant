@@ -4,14 +4,18 @@ This demo code shows how you can encrypt variables using ansible vault, and then
 
 # Setup
 - encrypt variables in secrets.yml
+
   ```
   ansible-vault create secrets.yml
   ```
+
   The contents of this file will be:
+
   ```
   ---
   test_password: rumpelstiltskin
   ```
+
 - include secrets.yml in your ansible task
   ```
   # vault.yml
